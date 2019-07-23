@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Blog</h1>
+
+    <hr />
+
+    {% if posts|length == 0 %}
+    <p>No posts yet</p>
+    {% else %}
+     
+        <ul>
+            {% for post in posts %}
+            <li><h3><a href="/onepost?onepostid={{post.post_keyid}}">{{post.post_heading}}</a></h3></li>
+            <li style="margin-left: 32px;">{{post.name}}</li>
+            <li style="margin-left: 48px;"><a href="/oneuser?user_id={{post.owner.id}}">{{post.owner.username}}</a></li>
+            <hr>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+
+    <hr />
+
+{% endblock %}

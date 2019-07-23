@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Blog Post</h1>
+
+    <hr />
+     
+        <ul>
+            <li><h3>{{post.post_heading}}</h3></li>
+            <li style="margin-left: 32px;">{{post.name}}</li>
+            <li style="margin-left: 48px;"><a href="/oneuser?user_id={{post.owner.id}}">{{post.owner.username}}</a></li>
+            <hr>
+        </ul>
+
+    <hr />
+
+{% endblock %}

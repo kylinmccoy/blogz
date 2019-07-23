@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+
+        <nav>
+            <a href="blog">Main blog listings</a>
+            <a href="newpost">Post new blog entry</a>
+            <a href="/">Home</a>
+        </nav>
+        <hr>
+        <nav>
+            <a href="login">Login</a>
+            <form action='logout' method='POST'>
+                <input name='logout' type='submit' value='Logout'>
+            </form>
+        </nav>
+         
+        {% block content %}
+        {% endblock %} 
+
+    </body>
+</html>

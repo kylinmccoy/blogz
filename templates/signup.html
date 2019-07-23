@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Register a new blog posting account</h1>
+
+
+<form method='POST', action='/signupsend'>
+    <label>Username (3-20 characters)
+        <input name="username" type="text"/>
+    </label>
+    <p class="error">{{username_error}}</p>
+    <label>Password (3-20 characters)
+        <input name="password" type="password"/>
+    </label>
+    <p class="error">{{password_error}}</p>
+    <label>Verify Password
+        <input name="verify" type="password"/>
+    </label>
+    <p class="error">{{re_password_error}}</p>
+    <input type="submit" value="Register" />
+</form>
+
+{% endblock %}
